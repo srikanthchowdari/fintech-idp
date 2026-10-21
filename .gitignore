@@ -1,7 +1,14 @@
-   *.tfstate
-   *.tfstate.*
-   .terraform/
-   *.tfvars
-   .env
-   kubeconfig*
-   *.pem
+# Terraform state and local working directories
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Local configuration and secrets
+*.tfvars
+.env
+.env.*
+!.env.example
+
+# Kubernetes credentials
+kubeconfig*
+*.pem

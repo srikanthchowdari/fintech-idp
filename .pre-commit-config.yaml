@@ -1,0 +1,14 @@
+# repos: lists the external hook repositories
+
+# terraform_fmt formats Terraform configuration files.
+# gitleaks scans files for patterns that resemble secrets.
+repos:
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.109.2 # rev pins the version of each hook repository so that your checks are reproducible.
+    hooks:
+      - id: terraform_fmt
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.0 
+    hooks:
+      - id: gitleaks
